@@ -1,0 +1,136 @@
+/* src/components/Footer.css */
+
+/* 1) Import font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --footer-bg:      #1a202c;
+  --footer-text:    #e2e8f0;
+  --footer-accent:  #4a90e2;
+  --footer-light:   rgba(255,255,255,0.7);
+  --footer-shadow:  rgba(0, 0, 0, 0.2);
+  --max-width:      1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  font-family: 'Inter', sans-serif;
+  padding: 3rem 1rem;
+  box-shadow: 0 -4px 12px var(--footer-shadow);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto 2rem;
+}
+
+/* About Section */
+.footer-section.about {
+  text-align: center;
+}
+
+.footer-logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.footer-section.about h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section.about p {
+  font-size: 0.95rem;
+  color: var(--footer-light);
+  line-height: 1.5;
+}
+
+/* Quick Links */
+.footer-section.links h4,
+.footer-section.contact h4,
+.footer-section.social h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--footer-text);
+}
+
+.footer-section.links ul {
+  list-style: none;
+}
+
+.footer-section.links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section.links a {
+  color: var(--footer-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.footer-section.links a:hover {
+  color: var(--footer-accent);
+}
+
+/* Contact Section */
+.footer-section.contact p {
+  font-size: 0.95rem;
+  color: var(--footer-light);
+  margin-bottom: 0.5rem;
+}
+
+/* Social Section */
+.footer-section.social .social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-section.social a {
+  color: var(--footer-text);
+  font-size: 1.25rem;
+  transition: color 0.2s;
+}
+
+.footer-section.social a:hover {
+  color: var(--footer-accent);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: var(--footer-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+  .footer-content {
+    gap: 1.5rem;
+  }
+  .footer-logo {
+    width: 60px;
+    margin-bottom: 0.75rem;
+  }
+}

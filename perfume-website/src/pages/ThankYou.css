@@ -1,0 +1,74 @@
+/* src/pages/ThankYou.css */
+
+/* 1) Import a clean sans-serif font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --gradient-start: #fef9e7;
+  --gradient-end:   #fdebd0;
+  --text-heading:  #2d3748;
+  --text-body:     #4a5568;
+  --card-bg:       #ffffff;
+  --shadow:        rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2) Full‐screen centered wrapper with gradient background */
+.thankyou-container {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  padding: 1rem;
+}
+
+/* 3) Card styling */
+.thankyou-container > h1,
+.thankyou-container > p {
+  max-width: 480px;
+  text-align: center;
+}
+
+.thankyou-container {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px var(--shadow);
+  padding: 2.5rem 1.5rem;
+}
+
+/* 4) Heading */
+.thankyou-container h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+}
+
+/* 5) Body text */
+.thankyou-container p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+/* 6) Responsive adjustments */
+@media (max-width: 600px) {
+  .thankyou-container {
+    padding: 2rem 1rem;
+  }
+  .thankyou-container h1 {
+    font-size: 1.75rem;
+  }
+  .thankyou-container p {
+    font-size: 0.95rem;
+  }
+}
